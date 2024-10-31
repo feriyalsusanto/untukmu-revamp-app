@@ -1,22 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:untukmu/core/di/locator.dart';
+import 'package:untukmu/core/services/theme_service.dart';
 
-final themeProvider = StateNotifierProvider<ThemeNotifier, ThemeData>((ref) {
-  return ThemeNotifier(ThemeData.light());
+final themeProvider = StateNotifierProvider<ThemeNotifier, ThemeMode>((ref) {
+  return ThemeNotifier(locator<ThemeService>());
 });
 
-class ThemeNotifier extends StateNotifier<ThemeData> {
-  ThemeNotifier(super.state);
+class ThemeNotifier extends StateNotifier<ThemeMode> {
+  final ThemeService _themeService;
 
-  void darkMode() {
-    if (state != ThemeData.dark()) {
-      state = ThemeData.dark();
+  ThemeNotifier(this._themeService)
+      : super(_themeService.isDarkMode ? ThemeMode.dark : ThemeMode.light);
+
+  void darkMode() async {
+    if (state != ThemeMode.dark) {
+      await _themeService.changeTheme(isDarkMode: true);
+      state = ThemeMode.dark;
     }
   }
 
-  void lightMode() {
-    if (state != ThemeData.light()) {
-      state = ThemeData.light();
+  void lightMode() async {
+    if (state != ThemeMode.light) {
+      await _themeService.changeTheme(isDarkMode: false);
+      state = ThemeMode.light;
     }
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:untukmu/config/theme/app_themes.dart';
 import 'package:untukmu/core/domain/providers/locale/locale_provider.dart';
 import 'package:untukmu/core/domain/providers/theme/theme_provider.dart';
 import 'package:untukmu/l10n/app_localizations.dart';
@@ -15,7 +16,9 @@ class AppWidget extends ConsumerWidget {
 
     return MaterialApp(
       locale: locale,
-      theme: theme,
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: theme,
       supportedLocales: AppLocalizations.supportedLocales,
       localizationsDelegates: const [
         AppLocalizations.delegate,
