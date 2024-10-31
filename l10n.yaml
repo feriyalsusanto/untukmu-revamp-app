@@ -1,0 +1,14 @@
+# l10n.yaml
+arb-dir: lib/l10n
+template-arb-file: app_en.arb
+output-localization-file: app_localizations.dart
+output-class: AppLocalizations
+untranslated-messages-file: untranslated.json
+synthetic-package: false
+nullable-getter: false
+# Optional configurations
+prefer-match-language-code: true
+format: true
+use-escaping: true
+required-resource-attributes: false
+use-deferred-loading: false
