@@ -1,0 +1,31 @@
+{
+    "code": 201,
+    "message": "success",
+    "caption" : "here some recommendation product",
+    "role" : "assistant",
+    "recommendation_products": [
+      {
+        "id": 64,
+        "name": "Hajeera",
+        "description": "3pcs tube flower tea (royal rose, jasmine, greentea), 2 pcs reed diffuser 50 (bloom, pirum), 1 pcs gold tea spoon, 1 jar kurma, 1 set hardbox 25x25x12cm including ribbon and tag, 1pcs eid mubarak card",
+        "image": "https://storage.googleapis.com/untukmu/products/2023/03/26/Hajeera_153-Hajeera.png",
+        "price": "300000",
+        "rating": "4.5"
+      },
+      {
+        "id": 68,
+        "name": "Kafi Package",
+        "description": "PRAYER RUG & BEADS JUMBO NASTAR COOKIES (485gr) LARGE CHOCO CHIP COOKIES (330gr) SCENTED CANDLE IKI LINEN SPRAY IKI EID POSTCARD",
+        "image": "https://storage.googleapis.com/untukmu/products/2023/03/26/Kafi-Package_532-kafi.jpeg",
+        "price": "275000",
+        "rating": "4.0"
+      }
+    ],
+    "suggestion_answer" : [
+      "Explain more about Hajeera",
+      "Explain more about Kafi Package",
+      "Which one is cheaper?"
+    ],
+    "timestamp": "2023-07-12T11:09:33+07:00",
+    "version": "1.0.2"
+  }

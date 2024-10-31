@@ -1,0 +1,24 @@
+{
+    "code": 201,
+    "message": "success",
+    "data": {
+      "tx_id": "9033b55f-f314-4d35-919a-b7779b66f973",
+      "amount": "221916",
+      "payment_type": "shopeepay",
+      "currency": "IDR",
+      "status": "0",
+      "pg_response": "{\"status_code\":\"201\",\"status_message\":\"ShopeePay transaction is created\",\"channel_response_code\":\"0\",\"channel_response_message\":\"success\",\"transaction_id\":\"9033b55f-f314-4d35-919a-b7779b66f973\",\"order_id\":\"order_x_31\",\"merchant_id\":\"G790314358\",\"gross_amount\":\"221916.00\",\"currency\":\"IDR\",\"payment_type\":\"shopeepay\",\"transaction_time\":\"2023-03-27 16:36:43\",\"transaction_status\":\"pending\",\"fraud_status\":\"accept\",\"actions\":[{\"name\":\"deeplink-redirect\",\"method\":\"GET\",\"url\":\"https://simulator.sandbox.midtrans.com/shopeepay/payment-pin?referenceId=DL-b4yzpa6z657JsBJCDfq3Ak\"}],\"expiry_time\":\"2023-03-27 16:41:43\"}",
+      "transaction": {
+        "id": 31
+      },
+      "qr": "https://simulator.sandbox.midtrans.com/shopeepay/payment-pin?referenceId=DL-b4yzpa6z657JsBJCDfq3Ak",
+      "deeplink_redirect": "https://simulator.sandbox.midtrans.com/shopeepay/payment-pin?referenceId=DL-b4yzpa6z657JsBJCDfq3Ak",
+      "bank": null,
+      "va_number": null,
+      "id": 20,
+      "created_at": "2023-03-27 16:36:44",
+      "updated_at": "2023-03-27 16:36:44"
+    },
+    "timestamp": "2023-03-27T16:36:44+07:00",
+    "version": "0.0.3"
+  }

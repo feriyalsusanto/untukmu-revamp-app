@@ -1,0 +1,8 @@
+{
+  "baseUrl": "https://api.untukmu.ai/",
+  "suffixUrl" : "",
+  "firebaseDynamicLinkUrl" : "https://untukmumobile.page.link",
+  "firebaseDynamicPrefixUrl" : "https://untukmu.ai",
+  "socketApiKey" : "WVbgJBqwGUqUHj32j4tUol5yBBdMdwYmTL5F3zBG57QwV0AHL2tC5f6aJ5zXJlcv",
+  "googleMapsApiKey": "AIzaSyCrWqRZ-_BiKQ-dL6arURFbRJzKJmvWnuo"
+}

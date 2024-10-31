@@ -1,0 +1,24 @@
+{
+    "code": 201,
+    "message": "success",
+    "data": {
+      "tx_id": "02842be1-1219-47b6-8aa0-490da915cb85",
+      "amount": "221916",
+      "payment_type": "gopay",
+      "currency": "IDR",
+      "status": "0",
+      "pg_response": "{\"status_code\":\"201\",\"status_message\":\"GoPay transaction is created\",\"transaction_id\":\"02842be1-1219-47b6-8aa0-490da915cb85\",\"order_id\":\"order_x_30\",\"merchant_id\":\"G790314358\",\"gross_amount\":\"221916.00\",\"currency\":\"IDR\",\"payment_type\":\"gopay\",\"transaction_time\":\"2023-03-27 16:35:43\",\"transaction_status\":\"pending\",\"fraud_status\":\"accept\",\"actions\":[{\"name\":\"generate-qr-code\",\"method\":\"GET\",\"url\":\"https://api.sandbox.midtrans.com/v2/gopay/02842be1-1219-47b6-8aa0-490da915cb85/qr-code\"},{\"name\":\"deeplink-redirect\",\"method\":\"GET\",\"url\":\"https://simulator.sandbox.midtrans.com/gopay/partner/app/payment-pin?id=ebd54e57-2b38-4ec5-bd02-8e31c1911b76\"},{\"name\":\"get-status\",\"method\":\"GET\",\"url\":\"https://api.sandbox.midtrans.com/v2/02842be1-1219-47b6-8aa0-490da915cb85/status\"},{\"name\":\"cancel\",\"method\":\"POST\",\"url\":\"https://api.sandbox.midtrans.com/v2/02842be1-1219-47b6-8aa0-490da915cb85/cancel\"}],\"expiry_time\":\"2023-03-27 16:50:43\"}",
+      "transaction": {
+        "id": 30
+      },
+      "qr": "https://api.sandbox.midtrans.com/v2/gopay/02842be1-1219-47b6-8aa0-490da915cb85/qr-code",
+      "deeplink_redirect": "https://simulator.sandbox.midtrans.com/gopay/partner/app/payment-pin?id=ebd54e57-2b38-4ec5-bd02-8e31c1911b76",
+      "bank": null,
+      "va_number": null,
+      "id": 19,
+      "created_at": "2023-03-27 16:35:43",
+      "updated_at": "2023-03-27 16:35:43"
+    },
+    "timestamp": "2023-03-27T16:35:43+07:00",
+    "version": "0.0.3"
+  }

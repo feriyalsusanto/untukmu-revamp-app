@@ -1,0 +1,27 @@
+
+
+
+{
+    "code": 201,
+    "message": "success",
+    "data": {
+      "tx_id": "ffc5befa-de43-4346-a00b-a7f1b980bf2a",
+      "amount": "221440",
+      "payment_type": "banktransfer",
+      "currency": "IDR",
+      "status": "0",
+      "pg_response": "{\"status_code\":\"201\",\"status_message\":\"Success, Bank Transfer transaction is created\",\"transaction_id\":\"ffc5befa-de43-4346-a00b-a7f1b980bf2a\",\"order_id\":\"order_x_28\",\"merchant_id\":\"G790314358\",\"gross_amount\":\"221440.00\",\"currency\":\"IDR\",\"payment_type\":\"bank_transfer\",\"transaction_time\":\"2023-03-27 15:08:54\",\"transaction_status\":\"pending\",\"fraud_status\":\"accept\",\"va_numbers\":[{\"bank\":\"bca\",\"va_number\":\"14358972687\"}],\"expiry_time\":\"2023-03-28 15:08:54\"}",
+      "transaction": {
+        "id": 28
+      },
+      "bank": "bca",
+      "va_number": "14358972687",
+      "qr": null,
+      "deeplink_redirect": null,
+      "id": 17,
+      "created_at": "2023-03-27 15:08:55",
+      "updated_at": "2023-03-27 15:08:55"
+    },
+    "timestamp": "2023-03-27T15:08:55+07:00",
+    "version": "0.0.3"
+  }

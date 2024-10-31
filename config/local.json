@@ -1,0 +1,7 @@
+{
+  "baseUrl": "https://api.untukmu.co/",
+  "suffixUrl" : "",
+  "firebaseDynamicLinkUrl" : "https://devuntukmu.page.link",
+  "firebaseDynamicPrefixUrl" : "https://untukmu.co",
+  "socketApiKey" : "1PtY37GaFZ1WLlmW5eAV9PRDQ7WoB6CS4WCuegqu5TGfyQwyglUI9vJftl2npwoE"
+}

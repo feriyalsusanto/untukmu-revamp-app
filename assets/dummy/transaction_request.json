@@ -1,0 +1,16 @@
+{
+    "payment_type": "banktransfer",
+    "bank": "bca",
+    "transaction_details": [
+      {
+        "shop_id": 13,
+        "contact_id": 6,
+        "products": [
+          {
+            "product_id": 85,
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  }

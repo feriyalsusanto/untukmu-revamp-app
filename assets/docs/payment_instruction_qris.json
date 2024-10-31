@@ -1,0 +1,21 @@
+{
+  "qrcode": {
+    "title": "Pembayaran Scan QR",
+    "instructions": [
+      "Open the Permata mobile banking app and log in using your user ID and password",
+      "Select the “Pay Bills” menu",
+      "Select “Add Bill” or enter your payment code if it has been saved before",
+      "Enter the amount of the bill to be paid",
+      "Confirm payment and enter your mobile banking PIN",
+      "Take a screenshot or save the payment notification for your records"
+      ],
+    "instructions_id": [
+    "Buka aplikasi mobile banking Permata dan masuk dengan menggunakan user ID dan password Anda",
+    "Pilih menu “Bayar Tagihan”",
+    "Pilih “Tambahkan Tagihan” atau masukkan kode pembayaran Anda jika sudah pernah disimpan",
+    "Masukkan jumlah tagihan yang akan dibayarkan",
+    "Konfirmasi pembayaran dan masukkan PIN mobile banking Anda",
+    "Ambil tangkapan layar atau simpan notifikasi pembayaran untuk catatan Anda"
+    ]
+  }
+}

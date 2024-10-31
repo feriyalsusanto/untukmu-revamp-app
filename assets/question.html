@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Magical Quiz</title>
+</head>
+<body>
+    <h1>Magical Quiz</h1>
+    <div id="question-container">
+        <p id="question-text"></p>
+        <form id="options-form">
+        </form>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        // Data pertanyaan dan opsi dari JSON
+        const questionsData = {
+    "list_question": [
+      {
+        "objective": "The Magical Hobby",
+        "question": "Your journey began when a friendly fairy invited you to explore your favorite hobby. She waved her wand and gave you a choice:",
+        "options": [
+          {
+            "answer": "How about a day of painting and creating art, surrounded by vibrant colors and magical landscapes?",
+            "value": "A"
+          },
+          {
+            "answer": "Or perhaps a day of hiking and discovering the secrets of the tranquil forest?",
+            "value": "B"
+          }
+        ],
+        "message": "Your choice sparkled with creativity and kindness."
+      },
+      {
+        "objective": "The Adventure Beckons",
+        "question": "Your magical adventure continued as you embarked on a quest to an enchanting destination. A colorful map unfolded before you, and you had to choose:",
+        "options": [
+          {
+            "answer": "A bustling city filled with wonders and endless entertainment.",
+            "value": "A"
+          },
+          {
+            "answer": "A serene forest, where the magic of nature reigns supreme.",
+            "value": "B"
+          }
+        ],
+        "message": "Your choice carried the promise of excitement and the serenity of nature's embrace."
+      },
+      {
+        "objective": "The Colorful Trail",
+        "question": "The path you followed was lined with beautiful flowers of every hue. You were drawn to one in particular, and it lit up your way:",
+        "options": [
+          {
+            "answer": "Radiant Red, the color of passion and energy.",
+            "value": "A"
+          },
+          {
+            "answer": "Calming Yellow, the color of tranquility and growth.",
+            "value": "B"
+          }
+        ],
+        "message": "The color you chose spoke of the vibrant energy or the peaceful growth you bring to the world."
+      },
+      {
+        "objective": "The Magic of Music",
+        "question": "The next stop on your journey was an enchanted musical performance. You entered a grand theater and had to decide:",
+        "options": [
+          {
+            "answer": "The allure of a live concert, where music fills the air and stirs your soul.",
+            "value": "C"
+          },
+          {
+            "answer": "A quiet corner with a good book, where tales transport you to distant lands.",
+            "value": "D"
+          }
+        ],
+        "message": "Your choice resonated with the magic of music or the enchantment of storytelling."
+      },
+      {
+        "objective": "The Bookish Realm",
+        "question": "As you turned the pages of your adventure, you found yourself in a library of endless books. You selected one and continued your magical journey:",
+        "options": [
+          {
+            "answer": "A world of fiction and fantasy, where dreams come to life.",
+            "value": "C"
+          },
+          {
+            "answer": "A realm of non-fiction and wisdom, where knowledge is the greatest treasure.",
+            "value": "D"
+          }
+        ],
+        "message": "The book you chose held the power to take you on imaginative journeys or enrich your wisdom."
+      },
+      {
+        "objective": "A Fashion Enchantment",
+        "question": "A wardrobe of enchanted clothing options appeared before you. You chose an outfit that resonated with your style:",
+        "options": [
+          {
+            "answer": "Casual and comfortable, perfect for everyday adventures.",
+            "value": "C"
+          },
+          {
+            "answer": "Elegant and formal, a timeless choice for special occasions.",
+            "value": "D"
+          }
+        ],
+        "message": "Your fashion choice reflected your unique style and how you expressed yourself."
+      },
+      {
+        "objective": "The Culinary Magic",
+        "question": "Your journey led you to a banquet of delightful dishes from around the world. Your senses tingled, and you opted for:",
+        "options": [
+          {
+            "answer": "International cuisine and exotic flavors, a true culinary adventure.",
+            "value": "E"
+          },
+          {
+            "answer": "Home-cooked comfort food, a taste of nostalgia and love.",
+            "value": "F"
+          }
+        ],
+        "message": "Your culinary choice revealed your love for culinary adventures or the comfort of home-cooked meals."
+      },
+      {
+        "objective": "Values & Causes",
+        "question": "You encountered a magical council of benevolent beings, each representing a different cause. They asked which one was closest to your heart:",
+        "options": [
+          {
+            "answer": "The cause of environmental conservation, protecting the magic of nature.",
+            "value": "E"
+          },
+          {
+            "answer": "The quest for human rights and social justice, ensuring equality and fairness.",
+            "value": "F"
+          }
+        ],
+        "message": "Your cause reflected your commitment to protecting nature or championing social justice."
+      },
+      {
+        "objective": "The Realm of Technology",
+        "question": "A mystical collection of magical gadgets and gizmos appeared before you. You were drawn to a selection that reflected your enchanting preference:",
+        "options": [
+          {
+            "answer": "The latest gadgets and tech innovations, the pinnacle of technological magic.",
+            "value": "E"
+          },
+          {
+            "answer": "Sustainable and eco-friendly technology, harnessing the power of nature.",
+            "value": "F"
+          }
+        ],
+        "message": "Your choice of technology spoke of your fascination with innovation or your commitment to sustainability."
+      },
+      {
+        "objective": "Nature's Gift",
+        "question": "Your path took you to an enchanted garden filled with wonders. You decided how to spend a sunny day:",
+        "options": [
+          {
+            "answer": "A whimsical picnic in the park, surrounded by beauty and laughter.",
+            "value": "G"
+          },
+          {
+            "answer": "An adventurous hike in the mountains, exploring the magic of nature.",
+            "value": "H"
+          }
+        ],
+        "message": "Your choice represented your love for cheerful picnics or thrilling adventures in nature."
+      },
+      {
+        "objective": "Creative Expressions",
+        "question": "In a magical studio, you had the opportunity to express yourself in a unique way. You selected your preferred mode of expression:",
+        "options": [
+          {
+            "answer": "Through art and visual creativity, a canvas for your imagination.",
+            "value": "G"
+          },
+          {
+            "answer": "Through writing and storytelling, sharing your magical tales.",
+            "value": "H"
+          }
+        ],
+        "message": "Your choice revealed your artistic flair or your storytelling spirit."
+      },
+      {
+        "objective": "Dreams of Travel",
+        "question": "Your journey concluded as you stood before a shimmering portal to another world. You could pick your dream destination:",
+        "options": [
+          {
+            "answer": "A bustling metropolis with skyscrapers that touch the sky.",
+            "value": "G"
+          },
+          {
+            "answer": "A serene island with pristine nature and tranquil beaches.",
+            "value": "H"
+          }
+        ],
+        "message": "Your dream destination reflected your yearning for the excitement of the city or the tranquility of an island escape."
+      }
+    ]
+  }
+  ;
+
+        // Inisialisasi
+        let currentQuestionIndex = 0;
+        let userAnswers = [];
+
+        function displayQuestion(questionData) {
+            const questionContainer = document.getElementById('question-container');
+            const questionText = document.getElementById('question-text');
+            const optionsForm = document.getElementById('options-form');
+            const resultContainer = document.getElementById('result-container');
+            const resultMessage = document.getElementById('result');
+
+            questionText.textContent = questionData.question;
+
+            optionsForm.innerHTML = '';
+
+            questionData.options.forEach(option => {
+                const radioInput = document.createElement('input');
+                radioInput.type = 'radio';
+                radioInput.name = 'answer';
+                radioInput.value = option.value;
+
+                const optionLabel = document.createElement('label');
+                optionLabel.textContent = option.answer;
+
+                optionsForm.appendChild(radioInput);
+                optionsForm.appendChild(optionLabel);
+                optionsForm.appendChild(document.createElement('br'));
+            });
+
+            const submitButton = document.createElement('button');
+            submitButton.type = 'submit';
+            submitButton.textContent = 'Next';
+
+            optionsForm.appendChild(submitButton);
+
+            optionsForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+
+                if (selectedAnswer) {
+                    userAnswers.push(selectedAnswer.value);
+                    currentQuestionIndex++;
+                    console.log("current question "+currentQuestionIndex)
+                    if (currentQuestionIndex < questionsData.list_question.length) {
+                        displayQuestion(questionsData.list_question[currentQuestionIndex]);
+                    } else if (currentQuestionIndex == questionsData.list_question.length){
+                        console.log("user answer "+userAnswers)
+                        const chunkSize = 3; // Ukuran chunk (3 huruf)
+
+                        // Membagi array menjadi chunk sebesar chunkSize
+                        const chunks = [];
+                        for (let i = 0; i < userAnswers.length; i += chunkSize) {
+                            chunks.push(userAnswers.slice(i, i + chunkSize));
+                        }
+
+                        // Menghitung frekuensi setiap karakter dalam setiap chunk
+                        const charFrequencies = [];
+                        chunks.forEach(chunk => {
+                            const frequency = {};
+                            chunk.forEach(char => {
+                                frequency[char] = (frequency[char] || 0) + 1;
+                            });
+                            charFrequencies.push(frequency);
+                        });
+
+                        // Mencari karakter dengan frekuensi tertinggi dalam setiap chunk
+                        const mostFrequentChars = charFrequencies.map(frequency => {
+                            let maxChar = '';
+                            let maxCount = 0;
+                            for (const char in frequency) {
+                                if (frequency[char] > maxCount) {
+                                    maxCount = frequency[char];
+                                    maxChar = char;
+                                }
+                            }
+                            return maxChar;
+                        });
+
+                        console.log("most frequent "+mostFrequentChars); // Hasil karakter dengan frekuensi tertinggi dari setiap chunk
+
+                    }
+                }
+            });
+        }
+
+        displayQuestion(questionsData.list_question[currentQuestionIndex]);
+    </script>
+</body>
+</html>

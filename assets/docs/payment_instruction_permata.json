@@ -1,0 +1,58 @@
+{
+  "mbanking": {
+    "title": "Mobile Banking Permata",
+    "instructions": [
+      "Buka aplikasi mobile banking Permata dan masuk dengan menggunakan user ID dan password Anda",
+      "Pilih menu “Bayar Tagihan”",
+      "Pilih “Tambahkan Tagihan” atau masukkan kode pembayaran Anda jika sudah pernah disimpan",
+      "Masukkan jumlah tagihan yang akan dibayarkan",
+      "Konfirmasi pembayaran dan masukkan PIN mobile banking Anda",
+      "Ambil tangkapan layar atau simpan notifikasi pembayaran untuk catatan Anda"
+    ],
+    "instructions_id": [
+      "Buka aplikasi mobile banking Permata dan masuk dengan menggunakan user ID dan password Anda",
+      "Pilih menu “Bayar Tagihan”",
+      "Pilih “Tambahkan Tagihan” atau masukkan kode pembayaran Anda jika sudah pernah disimpan",
+      "Masukkan jumlah tagihan yang akan dibayarkan",
+      "Konfirmasi pembayaran dan masukkan PIN mobile banking Anda",
+      "Ambil tangkapan layar atau simpan notifikasi pembayaran untuk catatan Anda"
+    ]
+  },
+  "ibanking": {
+    "title": "Internet Banking Permata",
+    "instructions": [
+      "Buka situs internet banking Permata dan masuk dengan menggunakan user ID dan password Anda",
+      "Pilih menu “Pembayaran”",
+      "Pilih “Tambahkan Pembayaran” atau masukkan kode pembayaran Anda jika sudah pernah disimpan",
+      "Masukkan jumlah tagihan yang akan dibayarkan",
+      "Konfirmasi pembayaran dan masukkan PIN internet banking Anda",
+      "Ambil tangkapan layar atau simpan notifikasi pembayaran untuk catatan Anda"
+    ],
+    "instructions_id": [
+      "Buka situs internet banking Permata dan masuk dengan menggunakan user ID dan password Anda",
+      "Pilih menu “Pembayaran”",
+      "Pilih “Tambahkan Pembayaran” atau masukkan kode pembayaran Anda jika sudah pernah disimpan",
+      "Masukkan jumlah tagihan yang akan dibayarkan",
+      "Konfirmasi pembayaran dan masukkan PIN internet banking Anda",
+      "Ambil tangkapan layar atau simpan notifikasi pembayaran untuk catatan Anda"
+    ]
+  },
+
+  "transfer": {
+    "title": "ATM Permata",
+    "instructions": [
+      "Log in to your Permata mobile/Internet banking account and enter your access code/user ID and password",
+      "Select “Transfer” > “Permata Account”",
+      "Enter the account number and amount to be transferred",
+      "Verify the account details and amount",
+      "Take a screenshot of the confirmation screen or save the payment notification for your records."
+    ],
+    "instructions_id": [
+      "Login ke rekening mobile/Internet banking Permata Anda dan masukkan kode akses/user ID dan password Anda",
+      "Pilih “Transfer” > “Rekening Permata”",
+      "Masukkan nomor rekening dan jumlah yang akan ditransfer",
+      "Verifikasi detail rekening dan jumlah",
+      "Ambil tangkapan layar layar konfirmasi atau simpan notifikasi pembayaran untuk catatan Anda."
+    ]
+  }
+}

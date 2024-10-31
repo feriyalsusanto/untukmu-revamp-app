@@ -1,0 +1,53 @@
+{
+  "mbanking": {
+    "title": "Mobile Banking Mandiri",
+    "instructions": [
+      "Log in to your Mandiri mobile banking account and enter your access code",
+      "Select “Transfer” > “Virtual Account Mandiri”",
+      "Select “Add Beneficiary” or enter your 13-digit payment code",
+      "Enter your Mandiri mobile banking PIN to initiate the payment",
+      "Take a screenshot of the confirmation screen or save the payment notification for your records."
+    ],
+    "instructions_id": [
+      "Login ke rekening Mandiri mobile banking Anda dan masukkan kode akses Anda",
+      "Pilih “Transfer” > “Virtual Account Mandiri”",
+      "Pilih “Tambahkan Penerima” atau masukkan 13 digit kode pembayaran Anda",
+      "Masukkan PIN Mandiri mobile banking Anda untuk melakukan pembayaran",
+      "Ambil tangkapan layar layar konfirmasi atau simpan notifikasi pembayaran untuk catatan Anda."
+    ]
+  },
+  "ibanking": {
+    "title": "Internet Banking Mandiri",
+    "instructions": [
+      "Log in to your Mandiri internet banking account and enter your user ID and password",
+      "Click on “Transfer” > “Virtual Account Mandiri”",
+      "Select “Add Beneficiary” or enter your 13-digit payment code",
+      "Enter the amount to be transferred and your internet banking PIN",
+      "Take a screenshot of the confirmation screen or save the payment notification for your records."
+    ],
+    "instructions_id": [
+      "Login ke rekening internet banking Mandiri Anda dan masukkan user ID dan password Anda",
+      "Klik “Transfer” > “Virtual Account Mandiri”",
+      "Pilih “Tambahkan Penerima” atau masukkan 13 digit kode pembayaran Anda",
+      "Masukkan jumlah yang akan ditransfer dan PIN internet banking Anda",
+      "Ambil tangkapan layar layar konfirmasi atau simpan notifikasi pembayaran untuk catatan Anda."
+    ]
+  },
+  "transfer": {
+    "title": "ATM Mandiri",
+    "instructions": [
+      "Log in to your Mandiri mobile/Internet banking account and enter your access code/user ID and password",
+      "Select “Transfer” > “Mandiri Account”",
+      "Enter the account number and amount to be transferred",
+      "Verify the account details and amount",
+      "Take a screenshot of the confirmation screen or save the payment notification for your records."
+    ],
+    "instructions_id": [
+      "Login ke rekening mobile/Internet banking Mandiri Anda dan masukkan kode akses/user ID dan password Anda",
+      "Pilih “Transfer” > “Rekening Mandiri”",
+      "Masukkan nomor rekening dan jumlah yang akan ditransfer",
+      "Verifikasi detail rekening dan jumlah",
+      "Ambil tangkapan layar layar konfirmasi atau simpan notifikasi pembayaran untuk catatan Anda."
+    ]
+  }
+}
