@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:untukmu/config/routes/app_route.dart';
 import 'package:untukmu/config/theme/app_themes.dart';
 import 'package:untukmu/core/domain/providers/locale/locale_provider.dart';
 import 'package:untukmu/core/domain/providers/theme/theme_provider.dart';
+import 'package:untukmu/core/presentation/localization_initializer.dart';
 import 'package:untukmu/l10n/app_localizations.dart';
 
 class AppWidget extends ConsumerWidget {
@@ -14,7 +16,7 @@ class AppWidget extends ConsumerWidget {
     final locale = ref.watch(localeProvider);
     final theme = ref.watch(themeProvider);
 
-    return MaterialApp(
+    return MaterialApp.router(
       locale: locale,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
@@ -26,7 +28,10 @@ class AppWidget extends ConsumerWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      home: const MyHomePage(),
+      routerConfig: appRoute,
+      builder: (context, child) {
+        return LocalizationInitializer(child: child!);
+      },
     );
   }
 }
@@ -51,13 +56,13 @@ class MyHomePage extends ConsumerWidget {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    ref.read(localeProvider.notifier).changeLocale('id');
+                    // ref.read(localeProvider.notifier).changeLocale('id');
                   },
                   child: const Text('Switch to Indonesia'),
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    ref.read(localeProvider.notifier).changeLocale('en');
+                    // ref.read(localeProvider.notifier).changeLocale('en');
                   },
                   child: const Text('Switch to English'),
                 ),
