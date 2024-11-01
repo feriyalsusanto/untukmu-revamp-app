@@ -14,13 +14,14 @@ class AppWidget extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final locale = ref.watch(localeProvider);
+    // final theme = ref.watch(themeProvider);
     final theme = ref.watch(themeProvider);
 
     return MaterialApp.router(
       locale: locale,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      themeMode: theme,
+      themeMode: theme.themeMode,
       supportedLocales: AppLocalizations.supportedLocales,
       localizationsDelegates: const [
         AppLocalizations.delegate,
@@ -29,6 +30,7 @@ class AppWidget extends ConsumerWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       routerConfig: appRoute,
+      // home: const LocalizationInitializer(child: MyHomePage()),
       builder: (context, child) {
         return LocalizationInitializer(child: child!);
       },
@@ -41,28 +43,35 @@ class MyHomePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = ref.watch(localizationsProvider);
+    final darkMode = ref.watch(themeProvider).isDarkMode;
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home Page'),
+        title: Text('Home Page $darkMode'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(AppLocalizations.of(context).greet_morning_label('Feriyal')),
+            Text(l10n.greet_morning_label('Feriyal')),
             const SizedBox(height: 16),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    // ref.read(localeProvider.notifier).changeLocale('id');
+                    ref
+                        .read(localeProvider.notifier)
+                        .changeLocale(LocaleCode.id);
                   },
                   child: const Text('Switch to Indonesia'),
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    // ref.read(localeProvider.notifier).changeLocale('en');
+                    ref
+                        .read(localeProvider.notifier)
+                        .changeLocale(LocaleCode.en);
                   },
                   child: const Text('Switch to English'),
                 ),
@@ -74,13 +83,13 @@ class MyHomePage extends ConsumerWidget {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    ref.read(themeProvider.notifier).darkMode();
+                    ref.read(themeProvider).toggleDark();
                   },
                   child: const Text('Switch to Dark'),
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    ref.read(themeProvider.notifier).lightMode();
+                    ref.read(themeProvider).toggleLight();
                   },
                   child: const Text('Switch to Light'),
                 ),

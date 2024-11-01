@@ -414,7 +414,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get select_preferred_lang => 'Select your preferred\nlanguage';
 
   @override
-  String get select_prefered_lang_label =>
+  String get select_preferred_lang_label =>
       'You will use the same language throughout the app';
 
   @override

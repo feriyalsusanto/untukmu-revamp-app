@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:untukmu/features/onboarding/onboarding_language_page.dart';
 import 'package:untukmu/features/onboarding/onboarding_page.dart';
 import 'package:untukmu/features/splash/splash_page.dart';
 
@@ -12,5 +13,10 @@ final appRoute = GoRouter(routes: [
     path: OnBoardingPage.routePath,
     name: OnBoardingPage.routeName,
     builder: (context, state) => const OnBoardingPage(),
+  ),
+  GoRoute(
+    path: OnBoardingLanguagePage.routePath,
+    name: OnBoardingLanguagePage.routeName,
+    builder: (context, state) => const OnBoardingLanguagePage(),
   ),
 ]);

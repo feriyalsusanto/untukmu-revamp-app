@@ -1,11 +1,13 @@
 // ignore_for_file: library_private_types_in_public_api
 
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:untukmu/config/theme/colors.dart';
+import 'package:untukmu/core/domain/providers/theme/theme_provider.dart';
 
 /// A customizable rounded material button with loading state.
-class RoundedMaterialButton extends StatefulWidget {
+class RoundedMaterialButton extends ConsumerStatefulWidget {
   /// The background color of the button.
   final Key? testKey;
 
@@ -87,7 +89,7 @@ class RoundedMaterialButton extends StatefulWidget {
   _RoundedMaterialButtonState createState() => _RoundedMaterialButtonState();
 }
 
-class _RoundedMaterialButtonState extends State<RoundedMaterialButton> {
+class _RoundedMaterialButtonState extends ConsumerState<RoundedMaterialButton> {
   bool _isLoading = false;
   LoadingButtonController? controller;
 
@@ -146,7 +148,7 @@ class _RoundedMaterialButtonState extends State<RoundedMaterialButton> {
 
   @override
   Widget build(BuildContext context) {
-    bool isDarkMode = Theme.of(context).brightness == Brightness.dark;
+    final isDarkMode = ref.watch(themeProvider).isDarkMode;
     return Material(
       color: Colors.transparent,
       child: InkWell(

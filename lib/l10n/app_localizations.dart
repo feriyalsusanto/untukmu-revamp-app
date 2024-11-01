@@ -866,11 +866,11 @@ abstract class AppLocalizations {
   /// **'Select your preferred\nlanguage'**
   String get select_preferred_lang;
 
-  /// No description provided for @select_prefered_lang_label.
+  /// No description provided for @select_preferred_lang_label.
   ///
   /// In en, this message translates to:
   /// **'You will use the same language throughout the app'**
-  String get select_prefered_lang_label;
+  String get select_preferred_lang_label;
 
   /// No description provided for @pending.
   ///

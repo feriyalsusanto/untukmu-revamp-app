@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:untukmu/core/domain/providers/theme/theme_provider.dart';
 import 'package:untukmu/features/onboarding/onboarding_page.dart';
 import 'package:untukmu/gen/assets.gen.dart';
 
-class SplashPage extends StatefulWidget {
+class SplashPage extends ConsumerStatefulWidget {
   static const routePath = '/';
   static const routeName = 'splash';
 
   const SplashPage({super.key});
 
   @override
-  State<SplashPage> createState() => _SplashPageState();
+  ConsumerState<SplashPage> createState() => _SplashPageState();
 }
 
-class _SplashPageState extends State<SplashPage> {
+class _SplashPageState extends ConsumerState<SplashPage> {
   @override
   Widget build(BuildContext context) {
-    final isDarkMode =
-        MediaQuery.of(context).platformBrightness == Brightness.dark;
+    final isDarkMode = ref.watch(themeProvider).isDarkMode;
 
     //TODO: REDIRECT PAGE NOT IMPLEMENTED
     Future.delayed(const Duration(seconds: 1), () {

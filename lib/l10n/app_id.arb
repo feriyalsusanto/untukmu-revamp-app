@@ -177,7 +177,7 @@
   "copy": "salin",
   "login_greet": "Saya Dewi, virtual AI assisten anda",
   "select_preferred_lang": "Tentukan bahasa pilihan\nAnda",
-  "select_prefered_lang_label": "Pilih bahasa yang akan digunakan di seluruh halaman aplikasi",
+  "select_preferred_lang_label": "Pilih bahasa yang akan digunakan di seluruh halaman aplikasi",
   "pending": "Menunggu",
   "paid": "Terbayar",
   "onprocess": "Diproses",

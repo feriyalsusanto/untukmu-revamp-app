@@ -177,7 +177,7 @@
   "copy": "Copy",
   "login_greet": "I''m Dewi, your virtual AI assistant",
   "select_preferred_lang": "Select your preferred\nlanguage",
-  "select_prefered_lang_label": "You will use the same language throughout the app",
+  "select_preferred_lang_label": "You will use the same language throughout the app",
   "pending": "Pending",
   "paid": "Paid",
   "onprocess": "On Process",

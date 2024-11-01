@@ -419,7 +419,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get select_preferred_lang => 'Tentukan bahasa pilihan\nAnda';
 
   @override
-  String get select_prefered_lang_label =>
+  String get select_preferred_lang_label =>
       'Pilih bahasa yang akan digunakan di seluruh halaman aplikasi';
 
   @override
